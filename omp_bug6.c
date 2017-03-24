@@ -12,6 +12,7 @@
 #define VECLEN 100
 
 float a[VECLEN], b[VECLEN];
+//sum is made global and not shared
 float sum;
 void dotprod ()
 {

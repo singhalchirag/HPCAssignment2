@@ -20,6 +20,7 @@ float a[N], b[N];
 omp_lock_t locka, lockb;
 
 /* Initialize the locks */
+
 omp_init_lock(&locka);
 omp_init_lock(&lockb);
 
@@ -42,6 +43,7 @@ omp_init_lock(&lockb);
     #pragma omp section
       {
       printf("Thread %d initializing a[]\n",tid);
+      //changes start here
       omp_set_lock(&lockb);
       for (i=0; i<N; i++)
         a[i] = i * DELTA;
@@ -51,6 +53,7 @@ omp_init_lock(&lockb);
         b[i] += a[i];
       omp_unset_lock(&locka);
       omp_unset_lock(&lockb);
+      //changes ends here
       }
 
     #pragma omp section
