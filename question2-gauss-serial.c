@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "math.h"
+#include <math.h>
 #include "util.h"
 #include <omp.h>
 
@@ -9,7 +9,7 @@ int main ()
         timestamp_type time1, time2;
         get_timestamp(&time1);
 	printf("abc");
-        gauss(1000);
+        gauss(500);
         get_timestamp(&time2);
         double elapsed = timestamp_diff_in_seconds(time1,time2);
         printf("Time elapsed is %f seconds.\n", elapsed);

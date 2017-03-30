@@ -9,7 +9,7 @@ int main ()
         timestamp_type time1, time2;
         get_timestamp(&time1);
 	printf("abc");
-        gauss(1000);
+        gauseParallel(1000);
         get_timestamp(&time2);
         double elapsed = timestamp_diff_in_seconds(time1,time2);
         printf("Time elapsed is %f seconds.\n", elapsed);
@@ -181,13 +181,13 @@ void gauseParallel(int Nvalue){
 
 void jacobiparallel(int Nvalue){
 
-	//printf("0");
+	printf("0");
 	int a,b;
 	double **prevUValue = (double **)malloc((Nvalue+2) * sizeof(double *));
 	for (a=0; a<(Nvalue+2); a++)
 		prevUValue[a] = (double *)malloc((Nvalue+2) * sizeof(double));
 	
-	//printf("1");
+	printf("1");
 	
 	int k,i,j,bp;
 	double hvalue,tempValue;
