@@ -181,13 +181,13 @@ void gauseParallel(int Nvalue){
 
 void jacobiparallel(int Nvalue){
 
-	//printf("0");
+	printf("0");
 	int a,b;
 	double **prevUValue = (double **)malloc((Nvalue+2) * sizeof(double *));
 	for (a=0; a<(Nvalue+2); a++)
 		prevUValue[a] = (double *)malloc((Nvalue+2) * sizeof(double));
 	
-	//printf("1");
+	printf("1");
 	
 	int k,i,j,bp;
 	double hvalue,tempValue;
